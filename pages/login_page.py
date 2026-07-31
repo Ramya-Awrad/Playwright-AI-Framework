@@ -1,24 +1,22 @@
+from pages.base_page import BasePage
 from locators.login_locators import LoginLocators
 from utils.logger import get_logger
 
 logger = get_logger()
 
 
-class LoginPage:
+class LoginPage(BasePage):
 
     def __init__(self, page):
-        self.page = page
+        super().__init__(page)
 
     def login(self, username, password):
 
         logger.info("Entering Username")
-
-        self.page.fill(LoginLocators.USERNAME, username)
+        self.fill(LoginLocators.USERNAME, username)
 
         logger.info("Entering Password")
-
-        self.page.fill(LoginLocators.PASSWORD, password)
+        self.fill(LoginLocators.PASSWORD, password)
 
         logger.info("Clicking Login Button")
-
-        self.page.click(LoginLocators.LOGIN_BUTTON)
+        self.click(LoginLocators.LOGIN_BUTTON)

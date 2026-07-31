@@ -1,8 +1,11 @@
-class CartPage:
+from pages.base_page import BasePage
+from locators.cart_locators import CartLocators
+
+
+class CartPage(BasePage):
 
     def __init__(self, page):
-        self.page = page
+        super().__init__(page)
 
     def is_product_present(self):
-
-        return self.page.locator(".inventory_item_name").inner_text()
+        return self.get_text(CartLocators.PRODUCT_NAME)
