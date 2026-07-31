@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
+import pytest
 
-
+@pytest.mark.api
 def test_api_get_users():
 
     with sync_playwright() as p:

@@ -1,10 +1,10 @@
 import json
-
+import pytest
 from pages.login_page import LoginPage
 from pages.inventory_page import InventoryPage
 from pages.cart_page import CartPage
 
-
+@pytest.mark.regression
 def test_add_product_to_cart(page):
 
     with open("testdata/login_data.json") as f:
@@ -12,9 +12,11 @@ def test_add_product_to_cart(page):
 
     login = LoginPage(page)
 
+    valid_user = data["users"][0]
+
     login.login(
-        data["valid_user"]["username"],
-        data["valid_user"]["password"]
+        valid_user["username"],
+        valid_user["password"]
     )
 
     inventory = InventoryPage(page)
