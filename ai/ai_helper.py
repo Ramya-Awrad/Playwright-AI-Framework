@@ -1,47 +1,47 @@
-import json
 import ollama
 
+from ai.prompts import TESTCASE_PROMPT, PLAYWRIGHT_CODE_PROMPT, CODE_REVIEW_PROMPT
 
-def get_login_credentials():
 
-    prompt = """
-Return ONLY valid JSON.
-
-Use these credentials:
-
-Username: standard_user
-Password: secret_sauce
-
-Return exactly:
-
-{
-    "username":"standard_user",
-    "password":"secret_sauce"
-}
-
-Do not write explanations.
-Do not use markdown.
-Do not write any text before or after JSON.
-"""
+def generate_test_cases(requirement):
 
     response = ollama.chat(
         model="llama3.2",
         messages=[
             {
                 "role": "user",
-                "content": prompt
+                "content": TESTCASE_PROMPT.format(requirement)
             }
         ]
     )
 
-    content = response["message"]["content"]
+    return response["message"]["content"]
 
-    print(content)
 
-    # Find JSON block
-    start = content.find("{")
-    end = content.rfind("}")
+def generate_playwright_code(requirement):
 
-    json_text = content[start:end + 1]
+    response = ollama.chat(
+        model="llama3.2",
+        messages=[
+            {
+                "role": "user",
+                "content": PLAYWRIGHT_CODE_PROMPT.format(requirement)
+            }
+        ]
+    )
 
-    return json.loads(json_text)
+    return response["message"]["content"]
+
+def review_playwright_code(code):
+
+    response = ollama.chat(
+        model="llama3.2",
+        messages=[
+            {
+                "role": "user",
+                "content": CODE_REVIEW_PROMPT.format(code)
+            }
+        ]
+    )
+
+    return response["message"]["content"]

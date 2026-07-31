@@ -1,0 +1,44 @@
+1. **Test Case 1: Valid Credentials**
+	* Preconditions: User account exists with valid username and password
+	* Steps:
+		1. Enter valid username and password into login form
+		2. Click on login button
+		3. Verify that user is redirected to dashboard page
+	* Expected Result: User is redirected to dashboard page
+	* Notes: Test with different browsers and devices for compatibility
+
+2. **Test Case 2: Invalid Username**
+	* Preconditions: User account exists with valid password
+	* Steps:
+		1. Enter invalid username and valid password into login form
+		2. Click on login button
+		3. Verify that error message is displayed
+	* Expected Result: Error message is displayed
+	* Notes: Test with different browsers and devices for compatibility
+
+3. **Test Case 3: Invalid Password**
+	* Preconditions: User account exists with valid username
+	* Steps:
+		1. Enter valid username and invalid password into login form
+		2. Click on login button
+		3. Verify that error message is displayed
+	* Expected Result: Error message is displayed
+	* Notes: Test with different browsers and devices for compatibility
+
+4. **Test Case 4: Empty Username**
+	* Preconditions: User account exists with valid password
+	* Steps:
+		1. Leave username field blank and enter valid password into login form
+		2. Click on login button
+		3. Verify that error message is displayed
+	* Expected Result: Error message is displayed
+	* Notes: Test with different browsers and devices for compatibility
+
+5. **Test Case 5: Empty Password**
+	* Preconditions: User account exists with valid username
+	* Steps:
+		1. Leave password field blank and enter valid username into login form
+		2. Click on login button
+		3. Verify that error message is displayed
+	* Expected Result: Error message is displayed
+	* Notes: Test with different browsers and devices for compatibility
