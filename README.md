@@ -52,6 +52,15 @@ The project follows the **Page Object Model (POM)** design pattern and demonstra
 
 ---
 
+
+# 💡 Why this Project?
+
+Traditional automation frameworks execute predefined scripts.
+
+This project extends that workflow by integrating a local LLM capable of generating Playwright code, reviewing generated code, validating syntax, analyzing failures and assisting automation engineers.
+
+---
+
 # 📂 Project Structure
 
 ```text
@@ -59,30 +68,32 @@ Playwright-AI-Framework
 │
 ├── ai/
 │   ├── outputs/
-│   ├── prompts.py
 │   ├── ai_helper.py
+│   ├── prompts.py
 │   ├── generate_testcases.py
 │   ├── generate_playwright_code.py
 │   ├── validate_code.py
-│   ├── review_code.py
-│   ├── analyze_failure.py
 │   ├── run_generated_test.py
-│   └── run_ai_pipeline.py
+│   ├── analyze_failure.py
+│   ├── review_code.py
+│   ├── run_ai_pipeline.py
+│   └── test_llm.py
 │
 ├── config/
+│   └── config.json
 │
+├── locators/
+├── logs/
 ├── pages/
-│
 ├── reports/
-│
+├── screenshots/
 ├── testdata/
-│
 ├── tests/
-│
 ├── utils/
 │
-├── requirements.txt
+├── conftest.py
 ├── pytest.ini
+├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
@@ -249,13 +260,13 @@ This project demonstrates practical implementation of:
 
 # 📸 Sample Outputs
 
-You can add screenshots here after uploading them.
-
-Example:
+The following screenshots will be added in future updates:
 
 - AI Pipeline Execution
+- Generated Playwright Code
 - HTML Report
-- Project Folder Structure
+- AI Code Review
+- Failure Analysis
 
 ---
 
@@ -270,6 +281,12 @@ https://github.com/Ramya-Awrad
 
 Repository:
 https://github.com/Ramya-Awrad/Playwright-AI-Framework
+
+---
+
+# 📄 License
+
+This project is developed for learning, demonstration, and portfolio purposes.
 
 ---
 
