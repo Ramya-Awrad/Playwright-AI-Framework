@@ -21,6 +21,6 @@ with open(
     f.write(output)
 
 if result.returncode == 0:
-    print("\n✅ Test Execution Passed")
+    print("\n[PASS] Test Execution Passed")
 else:
-    print("\n❌ Test Execution Failed")
+    print("\n[FAIL] Test Execution Failed")

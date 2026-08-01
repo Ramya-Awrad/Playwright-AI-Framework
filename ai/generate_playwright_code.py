@@ -9,7 +9,11 @@ code = generate_playwright_code(requirement)
 # Remove markdown if present
 code = code.replace("```python", "")
 code = code.replace("```", "")
+
+# Remove leading/trailing spaces
 code = code.strip()
+
+
 
 with open(
     "ai/outputs/generated_playwright_test.py",

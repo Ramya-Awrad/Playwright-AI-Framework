@@ -5,40 +5,10 @@ metadata: {'Python': '3.12.2', 'Platform': 'Windows-11-10.0.26200-SP0', 'Package
 rootdir: E:\Playwright-AI-Framework
 configfile: pytest.ini
 plugins: anyio-4.14.2, html-4.2.0, metadata-3.1.1
-collecting ... collected 0 items / 1 error
+collecting ... collected 1 item
 
-=================================== ERRORS ====================================
-__________ ERROR collecting ai/outputs/generated_playwright_test.py ___________
-.venv\Lib\site-packages\_pytest\python.py:508: in importtestmodule
-    mod = import_path(
-.venv\Lib\site-packages\_pytest\pathlib.py:596: in import_path
-    importlib.import_module(module_name)
-C:\Users\RAMYA AWRAD\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<frozen importlib._bootstrap>:1387: in _gcd_import
-    ???
-<frozen importlib._bootstrap>:1360: in _find_and_load
-    ???
-<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
-    ???
-<frozen importlib._bootstrap>:935: in _load_unlocked
-    ???
-.venv\Lib\site-packages\_pytest\assertion\rewrite.py:179: in exec_module
-    source_stat, co = _rewrite_test(fn, self.config)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.venv\Lib\site-packages\_pytest\assertion\rewrite.py:348: in _rewrite_test
-    tree = ast.parse(source, filename=strfn)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Users\RAMYA AWRAD\AppData\Local\Programs\Python\Python312\Lib\ast.py:52: in parse
-    return compile(source, filename, mode, flags,
-E     File "E:\Playwright-AI-Framework\ai\outputs\generated_playwright_test.py", line 1
-E       ```python
-E       ^
-E   SyntaxError: invalid syntax
+ai/outputs/generated_playwright_test.py::test_login PASSED               [100%]
+
 - Generated html report: file:///E:/Playwright-AI-Framework/reports/report.html -
-=========================== short test summary info ===========================
-ERROR ai/outputs/generated_playwright_test.py
-!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-============================== 1 error in 0.57s ===============================
+============================= 1 passed in 21.53s ==============================
 
